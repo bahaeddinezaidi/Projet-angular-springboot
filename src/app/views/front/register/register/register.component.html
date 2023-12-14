@@ -1,0 +1,59 @@
+<!-- <div class="w3-main" style="margin-left:340px;margin-right:40px">
+<div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Register</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <form >
+      <div class="w3-section">
+        <label>UserName</label>
+        <input class="w3-input w3-border" type="text" name="UserName" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="email" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Password</label>
+        <input class="w3-input w3-border" type="password" name="Password" required>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Register</button>
+    </form>  
+  </div>
+</div> -->
+<div class="register-form">
+  <h2>Register</h2>
+  <div class="alert alert-success" *ngIf="successMessage">{{ successMessage }}</div>
+
+  <form (ngSubmit)="registerUser()">
+    <!-- Champ Nom Etudiant / UserName -->
+    <div class="w3-section">
+      <label>Nom Etudiant / UserName</label>
+      <input class="w3-input w3-border" type="text" name="nomEtudiant" [(ngModel)]="form.username" required>
+    </div>
+    <!-- Champ Email -->
+    <div class="w3-section">
+      <label>Email</label>
+      <input class="w3-input w3-border" type="email" name="email" [(ngModel)]="form.email" required>
+    </div>
+    <!-- Champ Password -->
+    <div class="w3-section">
+      <label>Password</label>
+      <input class="w3-input w3-border" type="password" name="password" [(ngModel)]="form.password" required>
+    </div>
+    <!-- Champ CIN -->
+    <div class="w3-section">
+      <label>CIN</label>
+      <input class="w3-input w3-border" type="number" name="cin" [(ngModel)]="form.cin" required>
+    </div>
+   <!-- Champ Date Naissance -->
+<div class="w3-section">
+  <label>Date Naissance</label>
+  <input class="w3-input w3-border" type="date" name="dateNaissance" [(ngModel)]="form.dateNaissance" required>
+</div>
+    <!-- Champ Ecole -->
+    <div class="w3-section">
+      <label>Ecole</label>
+      <input class="w3-input w3-border" type="text" name="ecole" [(ngModel)]="form.ecole" required>
+    </div>
+    <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Register</button>
+  </form>
+</div>

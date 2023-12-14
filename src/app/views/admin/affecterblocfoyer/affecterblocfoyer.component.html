@@ -1,0 +1,28 @@
+<div class="container">
+    <h2 class="mt-4 mb-4">Affecter un bloc à un foyer</h2>
+    <div *ngIf="showSuccessAlert" class="alert alert-success" role="alert">
+      Bloc affecté au foyer avec succès!
+    </div>
+    
+    <form [formGroup]="affecterForm" (ngSubmit)="affecterBlocAFoyer()" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="idBloc" class="form-label">ID du bloc</label>
+        <input type="number" id="idBloc" formControlName="idBloc" class="form-control" required>
+        <br>
+        <div *ngIf="affecterForm.get('idBloc')?.hasError('required') && affecterForm.get('idBloc')?.touched" class="alert alert-danger">
+          Ce champ est requis
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="idFoyer" class="form-label">ID du foyer</label>
+        <input type="number" id="idFoyer" formControlName="idFoyer" class="form-control" required>
+        <br>
+        <div *ngIf="affecterForm.get('idFoyer')?.hasError('required') && affecterForm.get('idFoyer')?.touched" class="alert alert-danger">
+          Ce champ est requis
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Affecter</button>
+    </form>
+  </div>

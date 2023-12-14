@@ -1,0 +1,10 @@
+<div *ngIf="etudiantData" class="profile-container">
+    <h2>{{ etudiantData.nomEtudiant }}'s Profile:</h2>
+    <p>Cin: {{ etudiantData.cin }}</p>
+    <p>Date de naissance: {{ etudiantData.dateNaissence}}</p>
+    <p>Ecole: {{ etudiantData.ecole}}</p>
+    <!-- Add other information here -->
+  
+    <button [routerLink]="['/etudiant/editprofile', etudiantData.nomEtudiant]">Update Profile</button>
+  </div>
+  

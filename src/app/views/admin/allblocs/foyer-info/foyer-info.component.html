@@ -1,0 +1,17 @@
+<div class="foyer-details" *ngIf="foyer">
+    <div class="card">
+      <div class="card-header">
+        <h6 class="m-0 font-weight-bold">Foyer Details</h6>
+      </div>
+      <div class="card-body">
+        <p>ID: {{ foyer.idFoyer }}</p>
+        <p>Name: {{ foyer.nomFoyer }}</p>
+        <p>Capacite: {{ foyer.capaciteFoyer }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="foyer-details" *ngIf="!foyer">
+    <p>No foyer available.</p>
+  </div>
+

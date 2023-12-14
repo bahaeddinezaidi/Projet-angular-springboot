@@ -1,0 +1,24 @@
+
+
+<div class="container">
+    <h2 class="mt-4 mb-4">Modifier un Bloc</h2>
+    <div *ngIf="showSuccessAlert" class="alert alert-success" role="alert">
+      Bloc mis à jour avec succès!
+    </div>
+    <form [formGroup]="blocForm" (ngSubmit)="updateBloc()" class="needs-validation" novalidate action="#">
+      <div class="mb-3">
+        <label for="idBloc" class="form-label">ID du Bloc</label>
+        <input type="text" id="idBloc" formControlName="idBloc" class="form-control" readonly>
+      </div>
+      <div class="mb-3">
+        <label for="nomBloc" class="form-label">Nom du Bloc</label>
+        <input type="text" id="nomBloc" formControlName="nomBloc" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="capaciteBloc" class="form-label">Capacité du Bloc</label>
+        <input type="text" id="capaciteBloc" formControlName="capaciteBloc" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Modifier Bloc</button>
+    </form>
+  </div>
+  
